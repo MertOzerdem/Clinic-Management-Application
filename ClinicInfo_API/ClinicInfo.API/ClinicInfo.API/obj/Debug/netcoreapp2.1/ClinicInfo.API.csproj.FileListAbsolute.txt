@@ -1,0 +1,14 @@
+C:\Users\stajer\Desktop\ClinicInfo_API\ClinicInfo.API\ClinicInfo.API\bin\Debug\netcoreapp2.1\ClinicInfo.API.deps.json
+C:\Users\stajer\Desktop\ClinicInfo_API\ClinicInfo.API\ClinicInfo.API\bin\Debug\netcoreapp2.1\ClinicInfo.API.runtimeconfig.json
+C:\Users\stajer\Desktop\ClinicInfo_API\ClinicInfo.API\ClinicInfo.API\bin\Debug\netcoreapp2.1\ClinicInfo.API.runtimeconfig.dev.json
+C:\Users\stajer\Desktop\ClinicInfo_API\ClinicInfo.API\ClinicInfo.API\bin\Debug\netcoreapp2.1\ClinicInfo.API.dll
+C:\Users\stajer\Desktop\ClinicInfo_API\ClinicInfo.API\ClinicInfo.API\bin\Debug\netcoreapp2.1\ClinicInfo.API.pdb
+C:\Users\stajer\Desktop\ClinicInfo_API\ClinicInfo.API\ClinicInfo.API\obj\Debug\netcoreapp2.1\ClinicInfo.API.csprojAssemblyReference.cache
+C:\Users\stajer\Desktop\ClinicInfo_API\ClinicInfo.API\ClinicInfo.API\obj\Debug\netcoreapp2.1\ClinicInfo.API.csproj.CoreCompileInputs.cache
+C:\Users\stajer\Desktop\ClinicInfo_API\ClinicInfo.API\ClinicInfo.API\obj\Debug\netcoreapp2.1\ClinicInfo.API.RazorAssemblyInfo.cache
+C:\Users\stajer\Desktop\ClinicInfo_API\ClinicInfo.API\ClinicInfo.API\obj\Debug\netcoreapp2.1\ClinicInfo.API.RazorAssemblyInfo.cs
+C:\Users\stajer\Desktop\ClinicInfo_API\ClinicInfo.API\ClinicInfo.API\obj\Debug\netcoreapp2.1\ClinicInfo.API.AssemblyInfoInputs.cache
+C:\Users\stajer\Desktop\ClinicInfo_API\ClinicInfo.API\ClinicInfo.API\obj\Debug\netcoreapp2.1\ClinicInfo.API.AssemblyInfo.cs
+C:\Users\stajer\Desktop\ClinicInfo_API\ClinicInfo.API\ClinicInfo.API\obj\Debug\netcoreapp2.1\ClinicInfo.API.RazorTargetAssemblyInfo.cache
+C:\Users\stajer\Desktop\ClinicInfo_API\ClinicInfo.API\ClinicInfo.API\obj\Debug\netcoreapp2.1\ClinicInfo.API.dll
+C:\Users\stajer\Desktop\ClinicInfo_API\ClinicInfo.API\ClinicInfo.API\obj\Debug\netcoreapp2.1\ClinicInfo.API.pdb

@@ -1,0 +1,43 @@
+// add service
+{
+    "discount": 0,
+    "patientId": 1,
+    "provider": "size ne co.",
+    "providedServices": [
+        "General health care",
+        "Checkup"
+    ]
+}
+
+// add serviceType
+{
+	"Fee" : 1111,
+	"Type" : "Dummy serviceType"
+}
+
+// add patient
+{
+    "Name": "Yeni",
+    "Surname": "Insan"
+}
+
+// add payment
+{
+    "patientId": 2,
+    "method": "elden ödeme",
+    "Amount": 99999
+}
+
+// add notification
+{
+    "text": "abdülün doðum günü"
+}
+
+// patch request to patient
+[
+    {
+        "op": "replace",
+        "path": "/name",
+        "value": "Bob"
+    }
+]
