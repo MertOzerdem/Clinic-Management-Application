@@ -1,0 +1,35 @@
+<p-accordion>
+        <p-accordionTab header="Information">
+            To list patient {{currentServiceType.serviceTypeId}} transactions and provided services please
+             click on "List Transactions" or "List Services"Buttons.
+            Or to navigate back to patient list select "Back To Patients"
+        </p-accordionTab>
+    </p-accordion>
+    <h2>Product ID: {{currentServiceType.serviceTypeId}} </h2>
+    <h4>Product Type: {{currentServiceType.type}}</h4>
+    <h4>Product Fee: {{currentServiceType.fee}}</h4>
+<h4>Delete Product with Id {{currentServiceType.serviceTypeId}}: 
+<button pButton type="button" class="ui-button-raised ui-button-danger" 
+label="Delete Product" (click)='onClick()' style="margin: 2px"></button>
+</h4>
+
+<p-table [value]="services">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>SERVICE ID</th>
+            <th>SERVICE PROVİDER</th>
+            <th>SERVICE FEE</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-services>
+        <tr>
+            <td>{{services.serviceId}}</td>
+            <td>{{services.provider}}</td>
+            <td>{{services.serviceFee}}</td>
+        </tr>
+    </ng-template>
+</p-table>
+
+<button class='btn btn-outline-secondary' (click)='onBack()'>
+    <i class='fa fa-chevron-left'></i>Back To Products
+</button>

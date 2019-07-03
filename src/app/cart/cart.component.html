@@ -1,0 +1,38 @@
+<p-accordion>
+  <p-accordionTab header="Information">
+    All Transactions are listed here with the respected patients' ids
+  </p-accordionTab>
+</p-accordion>
+
+<div class='card'>
+  <div class='card-header'>
+    <!-- {{title}} -->
+  </div>
+  <h4>Transactions: </h4>
+</div>
+
+<p-table [value]="cartObject">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>PATIENT ID</th>
+      <th>PAYMENT ID</th>
+      <th>METHOD</th>
+      <th>AMOUNT</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-cartObject>
+    <tr>
+      <td>
+        <a [routerLink]="['/patients', cartObject.patientId]">
+          {{cartObject.patientId}}
+        </a>
+      </td>
+      <td>
+        <a [routerLink]="['/cart', cartObject.paymentId]">
+          {{cartObject.paymentId}}
+        </a></td>
+      <td>{{cartObject.method}}</td>
+      <td>{{cartObject.amount}}</td>
+    </tr>
+  </ng-template>
+</p-table>

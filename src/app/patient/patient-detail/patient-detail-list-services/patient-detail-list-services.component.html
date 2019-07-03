@@ -1,0 +1,27 @@
+<router-outlet></router-outlet>
+<p-table [value]="services">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>SERVICE ID</th>
+            <th>SERVICE PROVİDER</th>
+            <th>SERVICE FEE</th>
+        </tr>
+    </ng-template>  
+    <ng-template pTemplate="body" let-services>
+        <tr>
+                <!-- <a [routerLink] = "['/patients', filteredPatients.patientId]">
+                    {{filteredPatients.patientId}}
+                </a> -->
+            <td>
+                <a [routerLink] = "[services.serviceId]">
+                    {{services.serviceId}}
+                </a>
+                
+            </td>
+            <td>{{services.provider}}</td>
+            <td>{{services.serviceFee}}</td>
+        </tr>
+    </ng-template>
+  </p-table>
+
+  

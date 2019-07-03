@@ -1,0 +1,64 @@
+<p-accordion>
+    <p-accordionTab header="Information">
+        To get specific patient's list of transactions and services please 
+        click on the respected ID number of the patient.
+    </p-accordionTab>
+</p-accordion>
+
+    
+<div class='card'>
+    <div class='card-header'>
+        <!-- {{title}} -->
+    </div>
+    <h3>Add Patient To System:
+        <button pButton type="button" class="ui-button-raised ui-button-warning" [routerLink]="['/patients/addpatient']"
+            label="Add Patient" style="margin: 2px" style="margin-left: 0px"></button>
+    </h3>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button pButton type="button" label="Filter By ID" style="margin: 2px" style="margin-left: 0px"
+                    (click)='onClickId()'></button>
+                <button pButton type="button" label="Filter By Name/Surname" style="margin: 2px"
+                    (click)='onClickName()'></button>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class='col-md-4'>
+                        <input type='text' [(ngModel)]='listFilter' placeholder={{filterDeciderName}} />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col-md-6'>
+            <h4>Filtered by: {{listFilter}} </h4>
+        </div>
+    </div>
+</div>
+
+
+<p-table [value]="filteredPatients">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>SURNAME</th>
+            <th>BALANCE</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-filteredPatients>
+        <tr>
+            <td>
+                <a [routerLink]="['/patients', filteredPatients.patientId]">
+                    {{filteredPatients.patientId}}
+                </a>
+            </td>
+            <td>{{filteredPatients.name}}</td>
+            <td>{{filteredPatients.surname}}</td>
+            <td>{{filteredPatients.balance}}</td>
+        </tr>
+    </ng-template>
+</p-table>

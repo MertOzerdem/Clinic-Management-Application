@@ -1,0 +1,35 @@
+<p-accordion>
+    <p-accordionTab header="About Transaction">
+        Patient Id field is already filled for you to target current patient.
+        You can change it if want to target some other patient. Transaction 
+        Amount is set to zero if left black.
+    </p-accordionTab>
+</p-accordion>
+<!-- Default form register -->
+<form class="text-center border border-light p-5">
+
+    <p class="h4 mb-4">Add Transaction</p>  
+    <div class="form-row mb-4">
+        <div class="col">
+            <p>Patient ID:</p>
+            <input type="text" id="defaultRegisterFormFirstName" [(ngModel)] = 'patientId' class="form-control" placeholder="Patient ID" name = "Patient ID">
+        </div>
+        <div class="col">
+            <p>Transaction Amount:</p>
+            <input type="text" id="defaultRegisterFormLastName" [(ngModel)] = 'amount' class="form-control" placeholder="Transaction Amount" name = "Transaction Amount">
+        </div>
+    </div>
+    <p>Transaction Method:</p>
+    <input type="email" id="defaultRegisterFormEmail" [(ngModel)] = 'method' class="form-control mb-4" placeholder="Transaction Method" name = "Transaction Method">
+
+    <!-- Password
+    <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+    <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+        At least 8 characters and 1 digit
+    </small> -->
+
+    <!-- Sign up button -->
+    <button class="btn btn-info my-4 btn-block" (click)='onCreateTransaction()' type="submit">Add Transaction</button>
+    <button pButton type="button" label="Back To Patient" style="margin: 2px" style="margin-left: 0px" (click)='onBack()' class="ui-button-danger"></button>
+    <hr>
+</form>

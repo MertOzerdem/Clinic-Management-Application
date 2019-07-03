@@ -1,0 +1,26 @@
+<p-accordion>
+  <p-accordionTab header="Information">
+    Fee is assigned to 0 if no number is given
+  </p-accordionTab>
+</p-accordion>
+<!-- Default form register -->
+<form class="text-center border border-light p-5">
+  <p class="h4 mb-4">Add Product</p>
+  <div class="form-row mb-4">
+    <div class="col">
+      <p>Product Type:</p>
+      <input type="text" id="defaultRegisterFormFirstName" [(ngModel)]='type' class="form-control mb-4"
+        placeholder="Product Type" name="Product Type">
+    </div>
+    <div class="col">
+      <p>Product Fee:</p>
+      <input type="text" id="defaultRegisterFormEmail" [(ngModel)]='fee' class="form-control mb-4"
+        placeholder="Product Fee" name="Product Fee">
+    </div>
+  </div>
+
+  <!-- Sign up button -->
+  <button class="btn btn-info my-4 btn-block" (click)='onCreateProduct()' type="submit">Add Product</button>
+  <button pButton type="button" label="Back To Products" style="margin: 2px" style="margin-left: 0px" (click)='onBack()'
+    class="ui-button-danger"></button>
+</form>
