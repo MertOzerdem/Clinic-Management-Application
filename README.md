@@ -1,3 +1,3 @@
 # Clinic Management Appliacation
 
-This program is designed in 4 layers primarly consisting of api(asp.net, entity framework) and client side (angular 7) program.
+Designed in two layers. For frontend i used Angular 2 and for backend i used EntityFramework and ASP.NET. This program aims to manage some client clinic's day to day accounting and patient data managment issues by using latest mobile and web technologies
