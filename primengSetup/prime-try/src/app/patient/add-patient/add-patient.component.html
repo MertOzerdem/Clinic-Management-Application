@@ -1,0 +1,33 @@
+<!-- Default form register -->
+<form class="text-center border border-light p-5">
+
+    <p class="h4 mb-4">Add Patient</p>
+
+    
+    <div class="form-row mb-4">
+        <div class="col">
+            <!-- First name -->
+            <p>First Name:</p>
+            <input type="text" id="defaultRegisterFormFirstName" [(ngModel)] = 'name' class="form-control" placeholder="First name" name = "First Name">
+        </div>
+        <div class="col">
+            <!-- Last name -->
+            <p>Last Name:</p>
+            <input type="text" id="defaultRegisterFormLastName" [(ngModel)] = 'surname' class="form-control" placeholder="Last name" name = "Last Name">
+        </div>
+    </div>
+    <!-- E-mail -->
+    <p>E-mail:</p>
+    <input type="email" id="defaultRegisterFormEmail" [(ngModel)] = 'email' class="form-control mb-4" placeholder="E-mail" name = "E-mail">
+
+    <!-- Password
+    <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+    <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+        At least 8 characters and 1 digit
+    </small> -->
+
+    <!-- Sign up button -->
+    <button class="btn btn-info my-4 btn-block" (click)='onCreateNewPatient()' type="submit">Add Patient</button>
+    <button pButton type="button" label="Back To Patients" style="margin: 2px" style="margin-left: 0px" (click)='onBack()' class="ui-button-danger"></button>
+    <hr>
+</form>

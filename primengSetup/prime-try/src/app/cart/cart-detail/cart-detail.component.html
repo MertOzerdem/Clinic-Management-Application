@@ -1,0 +1,37 @@
+<p-accordion>
+    <p-accordionTab header="Information">
+        {{currentPayment.patientId}}'s transactions with {{currentPayment.paymentId}}
+        is displayed below
+    </p-accordionTab>
+</p-accordion>
+<h2>Patient ID: {{currentPayment.patientId}}</h2>
+<h2>Payment ID: {{currentPayment.paymentId}}</h2>
+<h4>Payment Method: {{currentPayment.method}}</h4>
+<h4>Payment Amount: {{currentPayment.amount}}</h4>
+
+<h3>Cancel Transaction
+    <button pButton type="button" class="ui-button-raised ui-button-danger" label="Cancel Transaction"
+        style="margin: 2px" (click)='onCancel()' [routerLink]="['/patients/', currentPayment.patientId]">
+    </button>
+</h3>
+
+<form class="text-center border border-light p-5">
+    <h3>Update Transaction:
+        <div class="form-row mb-4">
+            <div class="col">
+                <h6>Method Name:</h6>
+                <input type="text" [(ngModel)]='newMethod' class="form-control" placeholder="newMethod"
+                    name="newMethod">
+            </div>
+            <div class="col">
+                <h6>Amount:</h6>
+                <input type="text" [(ngModel)]='newAmount' class="form-control" placeholder="newAmount"
+                    name="newAmount">
+            </div>
+        </div>
+        <button pButton type="button" class="ui-button-raised ui-button-danger" label="Edit Transaction" style="margin: 2px"
+            (click)='onUpdate()' [routerLink]="['/cart']">
+        </button>
+    </h3>
+    <button pButton type="button" label="Back To Cart" style="margin: 2px" style="margin-left: 0px" (click)='onBack()'></button>
+</form>

@@ -1,0 +1,44 @@
+<p-accordion>
+  <p-accordionTab header="About Service">
+      select products you want to charge
+  </p-accordionTab>
+</p-accordion>
+<!-- Default form register -->
+<form class="text-center border border-light p-5">
+  <p class="h4 mb-4">Add Service</p>  
+  <div class="form-row mb-4">
+      <div class="col">
+          <!-- Patient ID -->
+          <p>Patient ID:</p>
+          <input type="text" id="defaultRegisterFormFirstName" [(ngModel)] = 'patientId' class="form-control" placeholder="Patient ID" name = "Patient ID">
+      </div>
+      <div class="col">
+          <p>Discount:</p>
+          <input type="text" id="defaultRegisterFormLastName" [(ngModel)] = 'discount' class="form-control" placeholder="Applied discount" name = "Transaction Amount">
+      </div>
+  </div>
+  <p>Service Provider:</p>
+  <input type="email" id="defaultRegisterFormEmail" [(ngModel)] = 'provider' class="form-control mb-4" placeholder="Service Provider" name = "Transaction Method">
+
+  <!-- Checkbox is below -->
+  <div class= "ui-g">
+    <div *ngFor="let serviceType of serviceTypes" class="ui-g-6" style="width:250px;margin-bottom:10px">
+      <div class="ui-g-6"><p-checkbox name="group1" value="{{serviceType.type}}" label="{{serviceType.type}}" [(ngModel)]="selectedTypes" inputId="{{serviceType.serviceTypeId}}" (click)='onDummy()'></p-checkbox></div>
+    </div>
+    <div class = "ui-g-12">
+    Selected Service Types: <span *ngFor="let type of selectedTypes" style="margin-right:5px">/{{type}}</span>
+    </div>
+    <!-- ADD TOTAL SERVİCE FEE TO HERE -->
+  </div>
+  <!-- Checkbox is above -->
+  <!-- Password
+  <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+  <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+      At least 8 characters and 1 digit
+  </small> -->
+
+  <!-- Sign up button -->
+  <button class="btn btn-info my-4 btn-block" (click)='onCreateService()' type="submit">Add Service</button>
+  <button pButton type="button" label="Back To Patient" style="margin: 2px" style="margin-left: 0px" (click)='onBack()' class="ui-button-danger"></button>
+  <hr>
+</form>

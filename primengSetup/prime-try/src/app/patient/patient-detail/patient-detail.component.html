@@ -1,0 +1,34 @@
+<p-accordion>
+    <p-accordionTab header="Information">
+        To list patient {{currentPatient.patientId}}'s transactions and provided services please
+         click on "List Transactions" or "List Services"Buttons.
+        Or to navigate back to patient list select "Back To Patients"
+    </p-accordionTab>
+</p-accordion>
+<h2>Patient ID: {{currentPatient.patientId}} </h2>
+<h4>Patient Name: {{currentPatient.name}} {{currentPatient.surname}}</h4>
+<h4>Patient Balance: {{currentPatient.balance}}</h4>
+<h3>Add To System: 
+    <button pButton type="button" class="ui-button-raised ui-button-warning" 
+    [routerLink] = "['/patients', currentPatient.patientId, 'addtransaction']"
+    label="Add Transaction" style="margin: 2px" style="margin-left: 0px">
+    </button>
+    <button pButton type="button" class="ui-button-raised ui-button-warning" 
+    [routerLink] = "['/patients', currentPatient.patientId, 'addservice']"
+    label="Add Service" style="margin: 2px">
+    </button>
+</h3>
+<h3> Remove From System:
+    <button pButton type="button" class="ui-button-raised ui-button-danger"
+        label="REMOVE PATIENT!!!" style="margin: 2px"
+        style="margin-left: 0px" (click) ='onDelete()'>
+    </button>
+</h3>
+
+<p-tabMenu [model]="items" [activeItem]="items[0]"></p-tabMenu>
+<router-outlet></router-outlet>
+
+<button class='btn btn-outline-secondary' (click)='onBack()'>
+  <i class='fa fa-chevron-left'></i>Back To Patients 
+</button>
+
